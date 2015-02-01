@@ -8,8 +8,8 @@ int main()
    // a=b=0;
     int i;
     string str;
-    int closing,opening;
-    opening=closing=0;
+    int closing,opening,c;
+    opening=closing=c=0;
     cout<<"Enter any STATEMENT:";
     getline(cin,str);
     for(i=0;str[i]!='\0';i++)
@@ -21,13 +21,14 @@ int main()
         {closing++;}
 
     if(closing>opening)
-    {cout<<"unbalanced";return 0;
+    {cout<<"unbalanced";c++;return 0;
     }
 
     }
     if(opening==closing)
-    cout<<"balanced";
-
+    {cout<<"balanced";c++;}
+    if(c==0)
+    cout<<"unbalanced";
 
     return 0;
 
